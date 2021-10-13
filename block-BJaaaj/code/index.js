@@ -53,10 +53,10 @@ let amount = 4280;
 // Using mathematical operations find the solutions. `(+, -, \*, / , etc.)`
 
 // Declare a new variable `reducedAmount`. In it store the value that is 24 less than the value of amount.
-let reducedAmount = amount-24;
+let reducedAmount = amount - 24;
 // Declare another variable `addedAmount`. It's value should be 32 more than the value of amount.
-let addedAmount = amount+32;
+let addedAmount = amount + 32;
 // Declare a variable `multipleAmount`. It's value should be 7 times the value of amount.
-let multipleAmount = amount*7;
+let multipleAmount = amount * 7;
 // Declare a variable `dividedAmount`. It should store the resultant of amount divided by 57.
-let dividedAmount = amount/57;
+let dividedAmount = amount / 57;
