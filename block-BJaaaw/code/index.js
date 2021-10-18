@@ -26,9 +26,6 @@ if(num1 < num2) {
 }
 
 // 3. Convert the above code using`?` terniary operator
-
-let num1 = Number(prompt("Enter First number"));
-let num2 = Number(prompt("Enter Second number"));
 num1 < num2 ?
 alert(`${num2} is greater`)
 :
@@ -41,8 +38,8 @@ alert(`${num1} is greater`)
   - `if` house name is "lannister" then print the message " A lannister always pays his debt"
   - `else` print the message " All men must die"
 */
-let num = (prompt("please enter your house name"))
-if(num === "Stark"){
+let houseName = (prompt("please enter your house name"))
+if(houseName === "Stark"){
   alert("Winter is coming")
 } else if(num === "lannister"){
   alert("A lannister always pays his debt")
@@ -66,46 +63,46 @@ let num = (prompt("please enter your house name"))
 
 // 6. Write a program that takes the number of the month(1 - 12) and alert number of days in the month.
 
-   let num = Number(prompt("Enter month number"))
-   switch(num){
-     case 1:
-     alert("31 days")
+   let monthName = Number(prompt("Enter month name"))
+   switch (monthName) {
+     case "January":
+     alert("Number of day 31")
      break;
-     case 2:
-     alert("28 days")
+     case "Febuary":
+     alert("Number of day 28")
      break;
-     case 3:
-     alert("31 days")
+     case "march":
+     alert("Number of day 31")
      break;
-     case 4:
-     alert("30 days")
+     case "April":
+     alert("Number of day 30")
      break;
-     case 5:
-     alert("31 days")
+     case "May":
+     alert("Number of day 31")
      break;
-     case 6:
-     alert("30 days")
+     case "June":
+     alert("Number of day 30")
      break;
-     case 7:
-     alert("31 days")
+     case "July":
+     alert("Number of day 31")
      break;
-     case 8:
-     alert("31 days")
+     case "August":
+     alert("Number of day 31")
      break;
-     case 9:
-     alert("30 days")
+     case "September":
+     alert("Number of day 30")
      break;
-     case 10:
-     alert("31 days")
+     case "October":
+     alert("Number of day 31")
      break;
-     case 11:
-     alert("30 days")
+     case "November":
+     alert("Number of day 30")
      break;
-     case 12:
-     alert("31 days")
+     case "December":
+     alert("Number of day 31")
      break;
      default:
-     alert("invalid")  
+     alert("Not a invalid input")  
    }
 
 /* 7.
@@ -115,20 +112,25 @@ let num = (prompt("please enter your house name"))
   - `Salary > 50000` tax is 30 %
 
 */
-let num = Number(prompt("salery"))
-switch(num){
-  case 10:
-    alert("in-hand amount is 18000")
+let Salery = prompt("Enter your Salery");
+switch (true) {
+  case Salery <= 20000: {
+    let taxedAmount = (Salery * 10) / 100;
+    alert(`in-hand amount is ${Salery - taxedAmount}`);
     break;
-  case 20:
-    alert("in hand amount is 32000")
+}
+  case Salery <= 40000: {
+    let taxedAmount = (Salery * 20) / 100;
+    alert(`in-hand amount is ${Salery - taxedAmount}`);
     break;
-  case 30:
-    alert("in-hand amount is -35000")
+  }
+  case Salery > 50000: { 
+    let taxedAmount = (Salery * 30) / 100;
+    alert(`in-hand amount is ${Salery - taxedAmount}`);
     break;
+  }
     default:
-     alert("invalid") 
-
+    alert("Not a invalid input") 
 }
 
 //  if..else vs switch
@@ -143,7 +145,35 @@ Implement the condition give below using`if..else` and`switch` statement.
   - `marks > 0` alert`"Grade D"`
 
 */
+let marks = Number(prompt("Enter your marks"));
+if("marks > 100"){
+  alert("Marks can't be greater than 100")
+} else if(marks > 80 && marks < 100){
+  alert("Grade A")
+}else if(marks > 50 && marks < 80){
+  alert("Grade B")
+}else if(marks > 30 && marks < 50){
+  alert("Grade C")
+} else{
+  alert("Grade D")
+}
 
+switch (true){
+  case marks > 100 :
+    alert("Marks can't be greater than 100")
+    break;
+  case marks > 80 && marks < 100:
+    alert("Grade A")
+    break;
+  case marks > 50 && marks < 80:
+    alert("Grade B")
+    break;
+  case marks > 30 && marks < 50:
+    alert("Grade C")
+    break;
+    default:
+    alert("Grade D")
+}
 
 
 /* 9. Weather app
@@ -165,4 +195,18 @@ if(num === "sunny"){
   alert("Get a hanky")
 } else{
   alert("Not a valid input")
+}
+
+switch (true) {
+  case num === "sunny":
+    alert("Wear a T-shirt")
+    break;
+  case num === "rainy":
+    alert("Don't forget to take your raincoat")
+    break;
+  case num === "hot":
+    alert("Get a hanky")
+    break;
+    default:
+      alert("Not a valid input")
 }
