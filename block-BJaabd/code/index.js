@@ -10,6 +10,16 @@ Write a program that asks the user his/her age and check for the following condi
 - `if` the age is greater than 55 then print the message " You are too old to participate in the marthon".
 👇
 */
+let age = +prompt("Your age")
+if(age >=12 && age <=55){
+   alert("You can participate in the marathon")
+} else if(age >= 4 && age <=11){
+  alert(" You are too young to participate in the marathon")
+} else if(age < 4){
+  alert(" Hey Kiddo! Can You Walk ?")
+} else(
+  alert(" You are too old to participate in the marthon")
+)
 
 // Loops
 /*
@@ -22,11 +32,28 @@ n = 7 => output: heeeeeeello
 */
 // [Your code goes here]
 
+let num = +prompt("Enter the value of n") 
+const Start = "h";
+const End = "llo";
+let middle = "";
+for( let i = 0; i < num ; i++){
+  middle = middle + "e";
+}
+alert(Start + middle + End);
+
+
 /*
 Program to calculate the sum of first n natural numbers(1,2,3...n are known as natural numbers). Prompt user to enter n (using `prompt`) then based on input provided calculate and show result in `alert`.
 👇
 */
 // [Your code goes here]
+
+let sum = 0
+let num = +prompt("Enter a value of n")
+for(let i = 1; i > 0;){
+  sum += i ; 
+}
+console.log(sum)
 
 /* Switch Statement
 
@@ -47,6 +74,39 @@ Take a number value from user and alert the message if it matches the conditions
 */
 // [Your code goes here]
 
+let num = +prompt("Enter any number")
+switch (num){
+  case 1:
+    alert("ONE")
+    break;
+    case 2:
+    alert("TWO")
+    break;
+    case 3:
+    alert("THREE")
+    break;
+    case 4:
+    alert("FOUR")
+    break;
+    case 5:
+    alert("FIVE")
+    break;
+    case 6:
+    alert("SIX")
+    break;
+    case 7:
+    alert("SEVEN")
+    break;
+    case 8:
+    alert("EIGHT")
+    break;
+    case 9:
+    alert("NINE")
+    break;
+    default:
+     alert("PLEASE TRY AGAIN") 
+}
+
 /*
 🎖Using switch statement do the following
 
@@ -63,15 +123,57 @@ Take the value of `marks` (0-100) from user using `prompt` and `alert` the messa
 
 // [Your code goes here]
 
+let num = +prompt("Your marks")
+switch(true){
+  case num > 90:
+    alert("Your grade is AA")
+    break;
+    case num > 80 && num <= 90:
+    alert("Your grade is AB")
+    break;
+    case num > 70 && num <= 80:
+    alert("Your grade is BB")
+    break;
+    case num > 60 && num <= 70:
+    alert("Your grade is BC")
+    break;
+    case num > 50 && num <= 60:
+    alert("Your grade is CC")
+    break;
+    case num > 40 && num <= 50:
+    alert("Your grade is DD")
+    break;
+    case num > 30 && num <= 40:
+    alert("Your grade is FF")
+    break;
+    default:
+    alert("Enter Invalid Input")  
+}
 /*
  🎖Write a JavaScript program that takes two `integers` from user (using prompt) and alerts the larger number.
 */
 // [your code goes here]
+let numA = +prompt("firstInteger");
+let numB = +prompt("secondInteger")
+if(numA > numB){
+  alert(`${numA} is larger number`)
+} else if (numB > numA){
+  alert(`${numB} is larger number`)
+} else{
+  alert("please enter valid input")
+}
+
 
 /*
 🎖Write a JavaScript conditional statement to find the sign (+, -) of product of three numbers. Take those three numbers from user using `prompt`. Display an alert box with the specified sign.
 */
 // [Your code goes here]
+
+let num1 = +prompt("firstNumber");
+let num2 = +prompt("secondNumber");
+let num3 = +prompt("thirdNumber");
+alert(`${num1*num2*num3}`);
+
 
 /* Calculator
  🎖Make a simple calculator with these functions. Using prompt, type conversion, if else statement. Use prompt to take the input from user i.e two numbers and an operation (Add, Sub, Mul, Div).
@@ -86,3 +188,20 @@ Take the value of `marks` (0-100) from user using `prompt` and `alert` the messa
 */
 
 // [Your code goes here]
+let numA = +prompt("firstNumber");
+let numB = +prompt("secondNumber");
+let operation = +prompt("enter operation")
+switch(operation){
+  case Add:
+    alert(`${numA + numB}`)
+    break;
+  case Sub:
+    alert(`${numA - numB}`)
+    break;
+    case mul:
+    alert(`${numA * numB}`)
+    break;
+    case div:
+    alert(`${numA / numB}`)
+    break;
+}
