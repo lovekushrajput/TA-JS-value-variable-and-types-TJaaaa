@@ -28,7 +28,6 @@ while(amount < bank_balance){
         alert("You can afford it")
     } else{
         alert("You cannot afford it")
-    }
+    };
  
-
 // ⛑ Answer of the above will `$334.76`.
