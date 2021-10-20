@@ -50,10 +50,10 @@ Program to calculate the sum of first n natural numbers(1,2,3...n are known as n
 
 let sum = 0
 let num = +prompt("Enter a value of n")
-for(let i = 1; i > 0;){
+for(let i = 1; i <= num ; i++){
   sum += i ; 
 }
-console.log(sum)
+alert(`Value of  sum is ${sum}`)
 
 /* Switch Statement
 
@@ -172,7 +172,12 @@ if(numA > numB){
 let num1 = +prompt("firstNumber");
 let num2 = +prompt("secondNumber");
 let num3 = +prompt("thirdNumber");
-alert(`${num1*num2*num3}`);
+let product = num1 * num2 * num3;
+if(product > 0){
+  alert("The value neagtive")
+} else{
+  alert("The value is positive")
+}
 
 
 /* Calculator
@@ -190,18 +195,20 @@ alert(`${num1*num2*num3}`);
 // [Your code goes here]
 let numA = +prompt("firstNumber");
 let numB = +prompt("secondNumber");
-let operation = +prompt("enter operation")
+let operation = prompt("enter operation(add,sub,mul,div)")
 switch(operation){
-  case Add:
-    alert(`${numA + numB}`)
+  case "add":
+    alert(`The sum of ${numA} and ${numB} is ${numA + numB}`)
     break;
-  case Sub:
-    alert(`${numA - numB}`)
+  case "Sub":
+    alert(`The substraction of ${numA} and ${numB} is ${numA - numB}`)
     break;
-    case mul:
-    alert(`${numA * numB}`)
+    case "mul":
+    alert(`The multiplication of ${numA} and ${numB} is ${numA * numB}`)
     break;
-    case div:
-    alert(`${numA / numB}`)
+    case "div":
+    alert(`The division of ${numA} and ${numB} is ${numA / numB}`)
     break;
+    default:
+    alert(`enter a valid input`)
 }
